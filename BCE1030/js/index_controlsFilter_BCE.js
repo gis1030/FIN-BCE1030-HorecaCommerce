@@ -1,8 +1,9 @@
 // ++++++++ Choix de cartes et Arbres ++++++++
 var CarteGroup = {
     "<b>OSM.fr Carte</b>": carte01,
+    "<b>Google Satellite</b>": carte04,
     "<b>Google Terrain</b>": carte02,
-    /*     "<b>Google Streets</b>": carte03,
+    /*  "<b>Google Streets</b>": carte03,
         "<b>Google Satellite</b>": carte04,
         "<b>Google Satellite-Streets</b>": carte05,
         "<b>Google Terrain-Cycle</b>": carte06,
@@ -17,7 +18,7 @@ var GroupBCE1030 = {
 
 
 var LControl01 = L.control.layers(CarteGroup).addTo(carte);
-var LControl02 = L.control.layers(GroupBCE1030).addTo(carte);
+//var LControl02 = L.control.layers(GroupBCE1030).addTo(carte);
 // ++++++++ Choix de cartes et Arbres ++++++++
 
 // +++++++ Revient a la position initial ++++++++

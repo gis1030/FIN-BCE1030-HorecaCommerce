@@ -24,7 +24,7 @@ dib {
 }
 
 
-header{
+header {
     background-color: #2e0e792f;
     /*width: 1000px;*/
     /*top: 1%;*/
@@ -49,7 +49,7 @@ header{
     margin: 0.1%;
 }
 
-footer{
+footer {
     background-color: #2e0e792f;
     width: 99%;
     height: 9%;
@@ -68,9 +68,9 @@ footer{
     font-family: tahoma, helvetica;
     font-weight: bold;
     font-size: calc(0.3rem + 0.3vw);
-	font: center;
+    font: center;
     margin: 0.1%;
-	text-align:center;
+    text-align: center;
 }
 
 
@@ -133,16 +133,16 @@ div#Region00 {
 
 div#Region99 {
     position: fixed;
-	/*position: relative;*/
+    /*position: relative;*/
     /*position: absolute;*/
     width: 99%;
     height: 80%;
     border: 0.1em solid transparent;
-	margin: 0% 0% 0% 0%;
+    margin: 0% 0% 0% 0%;
     background-color: rgb(224, 216, 247);
     box-sizing: border-box;
     display: flex;
-	top: 10%;
+    top: 10%;
 }
 
 #maCarte {
@@ -150,7 +150,7 @@ div#Region99 {
     border: 0px solid transparent;
     width: 100%;
     height: 100%
-    /*display: flex;*/
+        /*display: flex;*/
 }
 
 .small {

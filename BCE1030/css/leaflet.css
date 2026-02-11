@@ -755,3 +755,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-left: -12px;
 	border-right-color: #fff;
 }
+
+/* Transforme le carré en cercle pour les éléments 'radio-style' */
+.leaflet-control-layers-overlays label:has(.radio-style) input {
+	appearance: none;
+	/* Désactive le style par défaut */
+	-webkit-appearance: none;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #777;
+	border-radius: 50%;
+	/* Cercle */
+	cursor: pointer;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+}
+
+/* Style quand c'est coché */
+.leaflet-control-layers-overlays label:has(.radio-style) input:checked {
+	background-color: #007bff;
+	border-color: #007bff;
+	box-shadow: inset 0 0 0 2px white;
+}

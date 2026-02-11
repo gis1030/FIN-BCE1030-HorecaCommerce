@@ -1,6 +1,7 @@
 // ++++++++ Choix de cartes et Elements ++++++++
 var CarteGroup = {
     "<b>OSM.fr Carte</b>": carte01,
+    "<b>Google Satellite</b>": carte04,
     "<b>Google Terrain</b>": carte02,
     /* "<b>Google Streets</b>": carte03,
      "<b>Google Satellite</b>": carte04,
@@ -9,6 +10,7 @@ var CarteGroup = {
      "<b>Google Streets-Cycle</b>": carte07,
      "<b>Google Traffic</b>": carte08,*/
 };
+var LControl00 = L.control.layers(CarteGroup).addTo(carte);
 
 var GroupDataALL = {
     "<b>agriculture, sylviculture et pêche</b></br>": GroupMarkersMap1030_Q01,
@@ -41,28 +43,91 @@ var GroupDataALL_Data = {
     "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
 };
 
-var GroupDataALL_Division = {
-    "<b>commerce de gros</b></br>": GroupMarkersMap1030_D46,
-    "<b>commerce de détail</b></br>": GroupMarkersMap1030_D47,
-    "<b>hébergement</b></br>": GroupMarkersMap1030_D55,
-    "<b>activités de service de restauration</b></br>": GroupMarkersMap1030_D56,
-    "<b>autres division NACE2025</b></br>": GroupMarkersMap1030_D99,
+var GroupDataALL_ONYX = {
+    "<b>non enregistré sur onyx</b></br>": GroupMarkersMap1030_C00,
+    "<b>enregistré sur onyx</b></br>": GroupMarkersMap1030_C01,
+    "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
+};
+var LControl_ONYX_Con = L.control.layers(null, GroupDataALL_ONYX).addTo(carte);
+var container = LControl_ONYX_Con.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">ONYX</div>');
 
+var GroupDataALL_NACE_Division = {
+    "<b>N46 commerce de gros</b></br>": GroupMarkersMap1030_D46,
+    "<b>N47 commerce de détail</b></br>": GroupMarkersMap1030_D47,
+    "<b>N55 hébergement</b></br>": GroupMarkersMap1030_D55,
+    "<b>N56 activités de service de restauration</b></br>": GroupMarkersMap1030_D56,
+    "<b>autres division NACE2025</b></br>": GroupMarkersMap1030_D99,
     "<b>non renseigné</b></br>": GroupMarkersMap1030_D00,
     "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
 };
+var LControl_NACE_Div = L.control.layers(null, GroupDataALL_NACE_Division).addTo(carte);
+var container = LControl_NACE_Div.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">NACE Division</div>');
 
-var GroupDataALL_ONYX = {
-    "<b>enregistré sur onyx</b></br>": GroupMarkersMap1030_C01,
-    "<b>non enregistré sur onyx</b></br>": GroupMarkersMap1030_C00,
+
+var GroupDataALL_NACE_A56 = {
+    // Division NACE 55 : Restauration
+    "<b>N561 activités de restaurant et de service de restauration mobile</b></br>": GroupMarkersMap1030_D561,
+    "<b>N562 activités de traiteur événementiel, de service contractuel de restauration et autres activités de service de restauration</b></br>": GroupMarkersMap1030_D562,
+    "<b>N563 activités de débit de boissons</b></br>": GroupMarkersMap1030_D563,
+    //"<b>N564 activités de service d’intermédiation pour des activités de service de restauration</b></br>": GroupMarkersMap1030_D564,
     "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
 };
+var LControl_N56 = L.control.layers(null, GroupDataALL_NACE_A56).addTo(carte);
+//var LControl_N56 = L.control.layers(GroupDataALL_NACE_A56).addTo(carte);
+var container = LControl_N56.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Restauration</div>');
 
-//var LControl01 = L.control.layers(GroupDataALL).addTo(carte);
-var LControl01 = L.control.layers(GroupDataALL_Division).addTo(carte);
-var LControl02 = L.control.layers(GroupDataALL_ONYX).addTo(carte);
-var LControl00 = L.control.layers(CarteGroup).addTo(carte);
-// ++++++++ Choix de cartes et Elements ++++++++
+var GroupDataALL_NACE_A55 = {
+    // Division NACE 55 : Hébergement
+    "<b>N551 hôtels et hébergement similaire</b></br>": GroupMarkersMap1030_D551,
+    "<b>N552 hébergement touristique et autre hébergement de courte durée</b></br>": GroupMarkersMap1030_D552,
+    "<b>N553 terrains de camping et parcs pour caravanes ou véhicules de loisirs</b></br>": GroupMarkersMap1030_D553,
+    //"<b>N554 activités de service d’intermédiation pour l’hébergement</b></br>": GroupMarkersMap1030_D554,
+    "<b>N559 autres hébergements</b></br>": GroupMarkersMap1030_D559,
+    "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
+};
+var LControl_N55 = L.control.layers(null, GroupDataALL_NACE_A55).addTo(carte);
+//var LControl_N55 = L.control.layers(GroupDataALL_NACE_A55).addTo(carte);
+var container = LControl_N55.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Hébergement</div>');
+
+var GroupDataALL_NACE_A46 = {
+    // Division NACE 46 : Commerce de gros
+    "<b>N462 intermédiaires du commerce de gros</b></br>": GroupMarkersMap1030_D461,
+    "<b>N463 commerce de gros de produits agricoles bruts et d’animaux vivants</b></br>": GroupMarkersMap1030_D462,
+    "<b>N463 commerce de gros de produits alimentaires, de boissons et de produits à base de tabac</b></br>": GroupMarkersMap1030_D463,
+    "<b>N464 commerce de gros de biens domestiques</b></br>": GroupMarkersMap1030_D464,
+    "<b>N465 commerce de gros d’équipements de l’information et de la communication</b></br>": GroupMarkersMap1030_D465,
+    "<b>N466 commerce de gros d’autres machines, équipements et fournitures</b></br>": GroupMarkersMap1030_D466,
+    "<b>N467 commerce de gros de véhicules automobiles, de motocycles et de leurs pièces et accessoires</b></br>": GroupMarkersMap1030_D467,
+    "<b>N468 autre commerce de gros spécialisé</b></br>": GroupMarkersMap1030_D468,
+    "<b>N469 commerce de gros non spécialisé</b></br>": GroupMarkersMap1030_D469,
+    "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
+};
+var LControl_N46 = L.control.layers(null, GroupDataALL_NACE_A46).addTo(carte);
+//var LControl_N46 = L.control.layers(GroupDataALL_NACE_A46).addTo(carte);
+var container = LControl_N46.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Commerce de gros</div>');
+
+var GroupDataALL_NACE_A47 = {
+    // Division NACE 47 : Commerce de détail
+    "<b>N471 commerce de détail non spécialisé</b></br>": GroupMarkersMap1030_D471,
+    "<b>N472 commerce de détail de produits alimentaires, de boissons et de tabac</b></br>": GroupMarkersMap1030_D472,
+    "<b>N473 commerce de détail de carburants</b></br>": GroupMarkersMap1030_D473,
+    "<b>N474 commerce de détail d’équipements de l’information et de la communication</b></br>": GroupMarkersMap1030_D474,
+    "<b>N475 commerce de détail d’autres équipements du foyer</b></br>": GroupMarkersMap1030_D475,
+    "<b>N476 commerce de détail de biens culturels et de loisirs</b></br>": GroupMarkersMap1030_D476,
+    "<b>N477 commerce de détail d’autres biens, à l’exception des automobiles et des motocycles</b></br>": GroupMarkersMap1030_D477,
+    "<b>N478 commerce de détail d’automobiles, de motocycles et de leurs pièces et accessoires</b></br>": GroupMarkersMap1030_D478,
+    "<b>N479 activités de service d’intermédiation pour le commerce de détail</b></br>": GroupMarkersMap1030_D479,
+    "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
+};
+var LControl_N47 = L.control.layers(null, GroupDataALL_NACE_A47).addTo(carte);
+//var LControl_N47 = L.control.layers(GroupDataALL_NACE_A47).addTo(carte);
+var container = LControl_N47.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Commerce de détail</div>');
 
 // +++++++ Revient a la position initial ++++++++
 L.easyButton('<img src="images/home.png" width="26" height="26" >', function () {

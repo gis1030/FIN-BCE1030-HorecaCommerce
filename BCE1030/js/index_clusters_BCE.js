@@ -42,7 +42,7 @@ var GroupMarkersMap1030_00 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 18,
+    disableClusteringAtZoom: 10,
     maxClusterRadius: 50,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
@@ -475,8 +475,8 @@ var GroupMarkersMap1030_D46 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 18,
-    maxClusterRadius: 50,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
         var digits = (cluster.getChildCount() + '').length;
@@ -493,8 +493,8 @@ var GroupMarkersMap1030_D47 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
-    maxClusterRadius: 50,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
         var digits = (cluster.getChildCount() + '').length;
@@ -511,8 +511,8 @@ var GroupMarkersMap1030_D55 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
-    maxClusterRadius: 50,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
         var digits = (cluster.getChildCount() + '').length;
@@ -529,8 +529,8 @@ var GroupMarkersMap1030_D56 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
-    maxClusterRadius: 50,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
         var digits = (cluster.getChildCount() + '').length;
@@ -547,8 +547,8 @@ var GroupMarkersMap1030_D99 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
-    maxClusterRadius: 50,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
         var digits = (cluster.getChildCount() + '').length;
@@ -560,14 +560,13 @@ var GroupMarkersMap1030_D99 = L.markerClusterGroup({
     }
 });
 
-
 var GroupMarkersMap1030_D00 = L.markerClusterGroup({
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
-    maxClusterRadius: 70,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
         var digits = (cluster.getChildCount() + '').length;
@@ -584,7 +583,7 @@ var GroupMarkersMap1030_C00 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
+    disableClusteringAtZoom: 10,
     maxClusterRadius: 70,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
@@ -602,7 +601,7 @@ var GroupMarkersMap1030_C01 = L.markerClusterGroup({
     showCoverageOnHover: true,
     zoomToBoundsOnClick: true,
     removeOutsideVisibleBounds: true,
-    disableClusteringAtZoom: 17,
+    disableClusteringAtZoom: 10,
     maxClusterRadius: 70,
     singleMarkerMode: false,
     iconCreateFunction: function (cluster) {
@@ -615,6 +614,493 @@ var GroupMarkersMap1030_C01 = L.markerClusterGroup({
     }
 });
 
+// +++++++++++ BEGIN Activites NACE2025 NACE 561-564 +++++++++++++
+var GroupMarkersMap1030_D561 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_01 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D562 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_02 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D563 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_03 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D564 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_04 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D551 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_01 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D552 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_02 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D553 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_03 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D554 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_04 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D559 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_05 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D461 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_01 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D462 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_02 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D463 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_03 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D464 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_04 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D465 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_05 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D466 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_06 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D467 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_07 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D468 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_08 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D469 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_09 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D471 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_01 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D472 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_02 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D473 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_03 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D474 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_04 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D475 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_05 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D476 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_06 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D477 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_07 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D478 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_08 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
+var GroupMarkersMap1030_D479 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_09 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+// +++++++++++ END Activites NACE2025 NACE 561-564 +++++++++++++
 
 // ++++++++++++++++++++++++++++ others not used ++++++++++++
 var GroupMarkersEntrave1030 = L.markerClusterGroup({

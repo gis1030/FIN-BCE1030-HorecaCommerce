@@ -36,19 +36,19 @@ const BCE_JuridicalForm = [
 
 const BCE_SecEconomique = [
     "non renseigné",
-    "Activités De Service Administratif Et De Soutien",
-    "Activités Financières Et D’Assurance",
-    "Activités Immobilières",
-    "Activités Spécialisées, Scientifiques Et Techniques",
-    "Arts, Sports Et Activités Récréatives",
-    "Autres Activités De Services",
-    "Commerce",
-    "Construction",
+    //"Activités De Service Administratif Et De Soutien",
+    //"Activités Financières Et D’Assurance",
+    //"Activités Immobilières",
+    //"Activités Spécialisées, Scientifiques Et Techniques",
+    //"Arts, Sports Et Activités Récréatives",
+    //"Autres Activités De Services",
+    //"Construction",
+    //"Industrie Manufacturière",
+    //"SectorGroup",
+    //"Télécommunications, Programmation Informatique, Conseil, Infrastructure Informatique Et Autres Activités De Service D'Information",
+    //"Transports Et Entreposage",
     "Hébergement Et Restauration",
-    "Industrie Manufacturière",
-    "SectorGroup",
-    "Télécommunications, Programmation Informatique, Conseil, Infrastructure Informatique Et Autres Activités De Service D'Information",
-    "Transports Et Entreposage",
+    "Commerce",
 ]
 
 const streetNames1030_FR = [
