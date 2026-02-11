@@ -729,7 +729,6 @@ var Marker1030_D00 = L.geoJSON([ListBCEMarkers1030], {
 }) // .addTo(carte); ; inutile lors de lúti;isation des clusters
 GroupMarkersMap1030_D00.addLayer(Marker1030_D00)
 
-
 // Others division NACE
 var Marker1030_D99 = L.geoJSON([ListBCEMarkers1030], {
     filter: function (feature) {
@@ -1043,6 +1042,12 @@ Marker1030_D00.on("click", function (event) {
     MarkerDataView(clickedMarker)
 });
 
+Marker1030_D99.on("click", function (event) {
+    var clickedMarker = event.layer;
+    // console.log(clickedMarker)
+    MarkerDataView(clickedMarker)
+});
+
 
 Marker1030_C00.on("click", function (event) {
     var clickedMarker = event.layer;
@@ -1055,6 +1060,7 @@ Marker1030_C01.on("click", function (event) {
     // console.log(clickedMarker)
     MarkerDataView(clickedMarker)
 });
+
 
 // BEGIN NEW OPTION ++++++++++++++++++++++++++++++
 const StylesCommerces = {
