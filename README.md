@@ -6,11 +6,12 @@ Cartography of enterprises registered with the Banque-Carrefour des Entreprises 
 The database contains identifying information on companies and their establishments, as well as data on their economic activities.
 The map provides a geographical representation of companies located in the municipality of Schaerbeek, providing an overview of their distribution based on information collected from the BCE.
 
-
-
 ## Type od Study
 
-Cartographic and statistical study of enterprises in the municipality of Schaerbeek
+Cartographic of enterprises in the municipality of Schaerbeek (Horeca and Commerces)
+
+## Link
+https://gis1030.github.io/FIN-BCE1030-HorecaCommerce/
 
 ## Data
 
