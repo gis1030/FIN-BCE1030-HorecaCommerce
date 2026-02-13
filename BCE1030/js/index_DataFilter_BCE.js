@@ -25,7 +25,7 @@ L.geoJSON([BoundaryDistrict], {
 // ++++++ Liste des Marqueurs ++++++++
 if (typeof EntityNumLabel === 'undefined' || NACELabel === 'undefined' || DenominationLabel === 'undefined' ||
     EntityTypeLabel === 'undefined' || SectorGroupLabel === 'undefined' || StreetLabel === 'undefined' || QuartierLabel === 'undefined'
-    || TypeOfEnterpriseLabel === 'undefined' || JuridicalFormLabel === 'undefined') {
+    || TypeOfEnterpriseLabel === 'undefined' || JuridicalFormLabel === 'undefined' || ConditionLabel === 'undefined') {
 
     var EntityNumLabel = ""
     var NACELabel = ""
@@ -36,6 +36,7 @@ if (typeof EntityNumLabel === 'undefined' || NACELabel === 'undefined' || Denomi
     var QuartierLabel = ""
     var TypeOfEnterpriseLabel = ""
     var JuridicalFormLabel = ""
+    var ConditionLabel = ""
 
     var Marker1030 = L.geoJSON([ListBCEMarkers1030], {
         style: function (feature) {
@@ -142,7 +143,8 @@ function onEachFeature(feature, layer) {
     if (feature.properties.EntityNumber) {
         var custompoup =
             "<dt> EnterpriseNumber : " + feature.properties.EnterpriseNumber + "</dt>" +
-            "<dt> Denomination : " + feature.properties.Denomination + "</dt>";
+            "<dt> Denomination : " + feature.properties.Denomination + "</dt>" +
+            "<dt> Condition : " + feature.properties.Condition + "</dt>";
         // "<dt> NaceCode: " + feature.properties.NaceCode + "</dt>" +;
         // "<dt> SectorGroup: " + feature.properties.SectorGroup + "</dt>" +
         // "<dt> Adresses: " + feature.properties.StreetFR + " " + feature.properties.HouseNumber + "</dt>";
@@ -152,7 +154,6 @@ function onEachFeature(feature, layer) {
     }
     layer.bindPopup(popupContent);
 }
-
 
 function MarkerDataView(clickedMarker) {
     //var AdresseRef = clickedMarker.feature.properties.StreetFR + " " + clickedMarker.feature.properties.HouseNumber + ", 1030 Schaerbeek";
@@ -176,6 +177,8 @@ function MarkerDataView(clickedMarker) {
     document.getElementById("JuridicalForm").value = clickedMarker.feature.properties.JuridicalForm
     document.getElementById("Division").value = clickedMarker.feature.properties.Division
     document.getElementById("Activites").value = clickedMarker.feature.properties.Activites
+    document.getElementById("Condition").value = clickedMarker.feature.properties.Condition
+
 
     //document.getElementById("HouseNumBCE").value = clickedMarker.feature.properties.HouseNumber
     //document.getElementById("CommentairesBCE").value = CommentairesDossier
@@ -235,6 +238,8 @@ function SearchData() {
 
     var TypeOfEnterpriseLabel = document.getElementById("TypeOfEnterprise").value;
     var JuridicalFormLabel = document.getElementById("JuridicalForm").value;
+    var ConditionLabel = document.getElementById("Condition").value;
+
 
     //on initialise les labels
     if (EntityNumLabel == "") {
@@ -264,6 +269,10 @@ function SearchData() {
     if (JuridicalFormLabel == "") {
         JuridicalFormLabel = "ALLData";
     }
+    if (ConditionLabel == "") {
+        ConditionLabel = "ALLData";
+    }
+
 
     // on initialise les compteurs
     var k_NACELabel = 0;
@@ -274,6 +283,7 @@ function SearchData() {
     var k_QuartierLabel = 0;
     var k_TypeOfEnterpriseLabel = 0;
     var k_JuridicalFormLabel = 0;
+    var k_ConditionLabel = 0;
 
     // On reinitialise les layers
     GroupMarkersMap1030_ALL.clearLayers();
@@ -472,6 +482,32 @@ function SearchData() {
             k_JuridicalFormLabel = jsonSEARCH.features.length;
             console.log("length k_JuridicalForm:", k_JuridicalFormLabel);
             document.querySelector("#CommentairesBCE").value = 'Forme juridique: ' + JuridicalFormLabel + " > Total: " + k_JuridicalFormLabel;
+        }
+    }
+
+
+    // Condition
+    if (EntityNumLabel === "ALLData") {
+        if (ConditionLabel !== "ALLData") {
+            if (jsonALL_00 === 0) {
+                //console.log("... alternatiba 01")
+                jsonALL_00 = jsonALL;
+                jsonSEARCH = {};
+            } else {
+                //console.log("... alternatiba 02")
+                jsonALL_00 = jsonSEARCH;
+                jsonSEARCH = {};
+            }
+            mylist = [{ SearchLabel: ConditionLabel }];
+
+            jsonSEARCH.features = jsonALL_00.features.filter(item => {
+                if (mylist.filter(myitem => myitem.SearchLabel.toLowerCase() === item.properties.Condition.toLowerCase()).length > 0) {
+                    return item;
+                }
+            });
+            k_ConditionLabel = jsonSEARCH.features.length;
+            console.log("length k_Condition:", k_ConditionLabel);
+            document.querySelector("#CommentairesBCE").value = 'Condition: ' + ConditionLabel + " > Total: " + k_ConditionLabel;
         }
     }
 

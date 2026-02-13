@@ -385,6 +385,11 @@ const Quartier1030 = [
     "Parc Josaphat",
 ]
 
+const Condition1030 = [
+    "not registered",
+    "onyx",
+]
+
 
 // Función para poblar el datalist
 function populateDatalist(listId, dataArray) {
@@ -444,4 +449,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
     // Llama a la función para poblar el datalist 
     populateDatalist('datalist_Quartier', Quartier1030);
+});
+
+// datalist_Condition
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Llama a la función para poblar el datalist 
+    populateDatalist('datalist_Condition', Condition1030);
 });
