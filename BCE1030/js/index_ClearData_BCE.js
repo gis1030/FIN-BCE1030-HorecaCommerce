@@ -103,6 +103,7 @@ function ClearDataSearch() {
     document.getElementById("Division").value = ""
     document.getElementById("Activites").value = ""
     document.getElementById("Classification").value = ""
+    document.getElementById("Condition").value = ""
 
     LoadALLData();
     //window.open("Carte_BCESchaerbeek_ALL_22.html");

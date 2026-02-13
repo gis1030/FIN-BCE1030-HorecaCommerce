@@ -620,7 +620,7 @@ var Marker1030_D46 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#9f3ec2',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.4,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -645,7 +645,7 @@ var Marker1030_D47 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#d4a94c',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.4,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -670,7 +670,7 @@ var Marker1030_D55 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#4c8dbc',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.4,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -696,7 +696,7 @@ var Marker1030_D56 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#69c931',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.4,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -721,7 +721,7 @@ var Marker1030_D00 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#ba2c44',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.4,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -778,7 +778,7 @@ var Marker1030_C00 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#e77844',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.4,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -803,7 +803,7 @@ var Marker1030_C01 = L.geoJSON([ListBCEMarkers1030], {
             fillColor: '#26b249',
             color: "#000", //'#d39f2f',
             fillOpacity: 0.6,
-            radius: 4,
+            radius: 5,
             weight: 1,
             opacity: 1
         })
@@ -1065,39 +1065,39 @@ Marker1030_C01.on("click", function (event) {
 // BEGIN NEW OPTION ++++++++++++++++++++++++++++++
 const StylesCommerces = {
     // --- DIVISION 56: RESTAURATION (Chauds/Épicés) ---
-    "561": { fillColor: "#E63946", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Rouge Restaurant
-    "562": { fillColor: "#a77955", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Orange Traiteur
-    "563": { fillColor: "#FFB703", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Jaune Ambre (Bar)
-    "564": { fillColor: "#FF8C61", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Saumon (Intermédiation)
+    "561": { fillColor: "#E63946", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Rouge Restaurant
+    "562": { fillColor: "#a77955", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Orange Traiteur
+    "563": { fillColor: "#FFB703", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Jaune Ambre (Bar)
+    "564": { fillColor: "#FF8C61", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Saumon (Intermédiation)
 
     // --- DIVISION 55: HÉBERGEMENT (Froids/Nature) ---
-    "551": { fillColor: "#2199e3", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Bleu Hôtel
-    "552": { fillColor: "#5393d0", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Turquoise Tourisme
-    "553": { fillColor: "#4dae82", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Vert Camping
-    "554": { fillColor: "#8ea3c7", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Gris-Bleu (Interm.)
-    "559": { fillColor: "#b289cf", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Lavande (Autres)
+    "551": { fillColor: "#2199e3", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Bleu Hôtel
+    "552": { fillColor: "#5393d0", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Turquoise Tourisme
+    "553": { fillColor: "#4dae82", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Vert Camping
+    "554": { fillColor: "#8ea3c7", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Gris-Bleu (Interm.)
+    "559": { fillColor: "#b289cf", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Lavande (Autres)
 
     // --- DIVISION 47: COMMERCE DE DÉTAIL (Vifs/Urbains) ---
-    "471": { fillColor: "#5A189A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Violet
-    "472": { fillColor: "#9D0208", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Bordeaux (Alim.)
-    "473": { fillColor: "#333533", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Noir (Carburants)
-    "474": { fillColor: "#00D2FF", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Cyan (Info)
-    "475": { fillColor: "#BC6C25", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Terre de Sienne (Foyer)
-    "476": { fillColor: "#FFD60A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Jaune Culture
-    "477": { fillColor: "#F72585", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Rose (Autres biens)
-    "478": { fillColor: "#718093", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Acier (Autos)
-    "479": { fillColor: "#BE95C4", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Lilas (Interm.)
+    "471": { fillColor: "#5A189A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Violet
+    "472": { fillColor: "#9D0208", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Bordeaux (Alim.)
+    "473": { fillColor: "#333533", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Noir (Carburants)
+    "474": { fillColor: "#00D2FF", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Cyan (Info)
+    "475": { fillColor: "#BC6C25", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Terre de Sienne (Foyer)
+    "476": { fillColor: "#FFD60A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Jaune Culture
+    "477": { fillColor: "#F72585", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Rose (Autres biens)
+    "478": { fillColor: "#718093", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Acier (Autos)
+    "479": { fillColor: "#BE95C4", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Lilas (Interm.)
 
     // --- DIVISION 46: COMMERCE DE GROS (Industriels/Terre) ---
-    "461": { fillColor: "#607D8B", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Gris-Lois
-    "462": { fillColor: "#795548", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Marron (Agricole)
-    "463": { fillColor: "#4b7f3b", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Vert Bouteille (Alim.)
-    "464": { fillColor: "#aad624", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Kaki (Domestique)
-    "465": { fillColor: "#023E8A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Bleu Nuit (Machines)
-    "466": { fillColor: "#A52A2A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Cuivre (Véhicules)
-    "467": { fillColor: "#B7B7A4", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Sable (Spécialisé)
-    "468": { fillColor: "#0077B6", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }, // Bleu Mer (Équipement)
-    "469": { fillColor: "#414ab2", fillOpacity: 0.4, color: "#000", weight: 1, radius: 4 }  // Ardoise (Non Spéc.)
+    "461": { fillColor: "#607D8B", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Gris-Lois
+    "462": { fillColor: "#795548", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Marron (Agricole)
+    "463": { fillColor: "#4b7f3b", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Vert Bouteille (Alim.)
+    "464": { fillColor: "#aad624", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Kaki (Domestique)
+    "465": { fillColor: "#023E8A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Bleu Nuit (Machines)
+    "466": { fillColor: "#A52A2A", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Cuivre (Véhicules)
+    "467": { fillColor: "#B7B7A4", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Sable (Spécialisé)
+    "468": { fillColor: "#0077B6", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Bleu Mer (Équipement)
+    "469": { fillColor: "#414ab2", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }  // Ardoise (Non Spéc.)
 };
 
 // BEGIN ACTIVITES ++++++++++++++++++++++++
@@ -1273,7 +1273,8 @@ function onEachFeature(feature, layer) {
     if (feature.properties.EntityNumber) {
         var custompoup =
             "<dt> EnterpriseNumber : " + feature.properties.EnterpriseNumber + "</dt>" +
-            "<dt> Denomination : " + feature.properties.Denomination + "</dt>";
+            "<dt> Denomination : " + feature.properties.Denomination + "</dt>" +
+            "<dt> Condition : " + feature.properties.Condition + "</dt>";
         // "<dt> NaceCode: " + feature.properties.NaceCode + "</dt>" +;
         // "<dt> SectorGroup: " + feature.properties.SectorGroup + "</dt>" +
         // "<dt> Adresses: " + feature.properties.StreetFR + " " + feature.properties.HouseNumber + "</dt>";
@@ -1307,6 +1308,7 @@ function MarkerDataView(clickedMarker) {
     document.getElementById("JuridicalForm").value = clickedMarker.feature.properties.JuridicalForm
     document.getElementById("Division").value = clickedMarker.feature.properties.Division
     document.getElementById("Activites").value = clickedMarker.feature.properties.Activites
+    document.getElementById("Condition").value = clickedMarker.feature.properties.Condition
 
     //document.getElementById("HouseNumBCE").value = clickedMarker.feature.properties.HouseNumber
     //document.getElementById("CommentairesBCE").value = CommentairesDossier
