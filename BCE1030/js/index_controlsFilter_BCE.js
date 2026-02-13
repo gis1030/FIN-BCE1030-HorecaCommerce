@@ -204,13 +204,14 @@ let ChartPopControl = new ChartPopClass().addTo(carte);
 
 // +++++++ Title  +++++++++++
 var title = new L.Control({ 'position': 'bottomleft' });
+//var title = new L.Control({ 'position': 'topleft' });
 title.onAdd = function (carte) {
     this._div = L.DomUtil.create('div', 'info');
     this.update();
     return this._div;
 };
 title.update = function () {
-    this._div.innerHTML = '<a style="font-size: 17px; background-color: white; border: 4px solid white">Entités commerciales BCE-1030</a>';
+    this._div.innerHTML = '<a style="font-size: 20px; font-weight: bold; background-color: white; border: 4px solid white">BCE1030 (Horeca et Commerces)</a>';
 };
 title.addTo(carte);
 
