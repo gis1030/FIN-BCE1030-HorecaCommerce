@@ -104,11 +104,19 @@
                     <div class="container">
                         <hr size=3>
                         <div class="row justify-content-center">
-                            <div class="col-10 mb">
+                            <div class="col-8 mb">
                                 <label for="NomBCE" class="form-label"
                                     style="font-size: calc(0.5rem + 0.3vw)">Denomination de l'enterprise</label>
                                 <input type="text" class="form-control" id="NomBCE" placeholder="Denomination..."
                                     style="font-size: calc(0.4rem + 0.3vw)">
+                            </div>
+
+                            <div class="col-3 mb">
+                                <label for="Condition" class="form-label"
+                                    style="font-size: calc(0.5rem + 0.3vw)">Enregistré à 1030</label>
+                                <input class="form-control" list="datalist_Condition" id="Condition"
+                                    placeholder="Condition..." style="font-size: calc(0.4rem + 0.3vw)">
+                                <datalist id="datalist_Condition"></datalist>
                             </div>
 
                             <div class="col-3 mb">
@@ -292,7 +300,7 @@
             <!-- Fichiers Javascript Donnes BCE Schaerbeek-->
             <!-- <script src="databases/BCE1030_Taxes08.js" type="text/javascript"></script>  -->
             <script src="databases/BCE1030_Taxes08_ALL.js" type="text/javascript"></script>
-            <!-- <script src="databases/BCE1030_202506.js" type="text/javascript"></script>  -->
+            <!--<script src="databases/BCE1030_202506.js" type="text/javascript"></script> -->
         </div>
 
         <div id="JavaScript_ExternalLibraries">
@@ -353,6 +361,7 @@
                 localStorage.setItem("JuridicalForm0", document.getElementById("JuridicalForm").value);
                 localStorage.setItem("Division0", document.getElementById("Division").value);
                 localStorage.setItem("Activites0", document.getElementById("Activites").value);
+                localStorage.setItem("Condition0", document.getElementById("Condition").value);
 
                 // localStorage.setItem("HouseNumBCE0", document.getElementById("HouseNumBCE").value);
                 // localStorage.setItem("CityBCE0", document.getElementById("CityBCE").value);
@@ -397,6 +406,7 @@
                     localStorage.setItem("JuridicalForm0", document.getElementById("JuridicalForm").value);
                     localStorage.setItem("Division0", document.getElementById("Division").value);
                     localStorage.setItem("Activites0", document.getElementById("Activites").value);
+                    localStorage.setItem("Condition0", document.getElementById("Condition").value);
 
                     // localStorage.setItem("HouseNumBCE0", document.getElementById("HouseNumBCE").value);
                     // localStorage.setItem("CityBCE0", document.getElementById("CityBCE").value);

@@ -105,11 +105,18 @@
                     <div class="container">
                         <hr size=3>
                         <div class="row justify-content-center">
-                            <div class="col-10 mb">
+                            <div class="col-8 mb">
                                 <label for="NomBCE" class="form-label"
                                     style="font-size: calc(0.5rem + 0.3vw)">Denomination de l'enterprise</label>
                                 <input style="font-size: 11px" type="text" class="form-control input-sm" id="NomBCE"
                                     placeholder="Denomination..." disabled style="font-size: calc(0.4rem + 0.3vw)">
+                            </div>
+
+                            <div class="col-3 mb">
+                                <label for="Condition" class="form-label"
+                                    style="font-size: calc(0.5rem + 0.3vw)">Enregistré à 1030</label>
+                                <input style="font-size: 11px" type="text" class="form-control input-sm" id="Condition"
+                                    placeholder="Condition..." disabled style="font-size: calc(0.4rem + 0.3vw)">
                             </div>
 
                             <div class="col-3 mb">
@@ -344,6 +351,8 @@
                     localStorage.setItem("TypeOfEnterprise0", document.getElementById("TypeOfEnterprise").value);
                     localStorage.setItem("Classification0", document.getElementById("Classification").value);
                     localStorage.setItem("JuridicalForm0", document.getElementById("JuridicalForm").value);
+                    localStorage.setItem("Condition0", document.getElementById("Condition").value);
+
 
                     //localStorage.setItem("CommentairesBCE0", document.getElementById("CommentairesBCE").value);
                     //localStorage.setItem("SecGroupBCE0", document.getElementById("SecGroupBCE").value);
