@@ -46,7 +46,7 @@ const BCE_SecEconomique = [
     //"SectorGroup",
     //"Télécommunications, Programmation Informatique, Conseil, Infrastructure Informatique Et Autres Activités De Service D'Information",
     //"Transports Et Entreposage",
-	"Industrie Manufacturière",
+    "Industrie Manufacturière",
     "Hébergement Et Restauration",
     "Commerce",
 ]
