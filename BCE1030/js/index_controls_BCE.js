@@ -11,6 +11,8 @@ var CarteGroup = {
      "<b>Google Traffic</b>": carte08,*/
 };
 var LControl00 = L.control.layers(CarteGroup).addTo(carte);
+var container = LControl00.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Fond de carte</div>');
 
 var GroupDataALL = {
     "<b>agriculture, sylviculture et pêche</b></br>": GroupMarkersMap1030_Q01,
@@ -53,11 +55,12 @@ var container = LControl_ONYX_Con.getContainer().querySelector('.leaflet-control
 container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">ONYX</div>');
 
 var GroupDataALL_NACE_Division = {
+    "<b>N10 commerce de gros</b></br>": GroupMarkersMap1030_D10,
     "<b>N46 commerce de gros</b></br>": GroupMarkersMap1030_D46,
     "<b>N47 commerce de détail</b></br>": GroupMarkersMap1030_D47,
     "<b>N55 hébergement</b></br>": GroupMarkersMap1030_D55,
     "<b>N56 activités de service de restauration</b></br>": GroupMarkersMap1030_D56,
-    "<b>autres division NACE2025</b></br>": GroupMarkersMap1030_D99,
+    //"<b>autres division NACE2025</b></br>": GroupMarkersMap1030_D99,
     "<b>non renseigné</b></br>": GroupMarkersMap1030_D00,
     "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
 };
@@ -65,6 +68,15 @@ var LControl_NACE_Div = L.control.layers(null, GroupDataALL_NACE_Division).addTo
 var container = LControl_NACE_Div.getContainer().querySelector('.leaflet-control-layers-overlays');
 container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">NACE Division</div>');
 
+var GroupDataALL_NACE_A10 = {
+    // Division NACE 10 : Industries alimentaires
+    "<b>N107 fabrication de produits de boulangerie-pâtisserie et de pâtes alimentaires</b></br>": GroupMarkersMap1030_D107,
+    "<b>toutes les entites</b></br>": GroupMarkersMap1030_00
+};
+var LControl_N10 = L.control.layers(null, GroupDataALL_NACE_A10).addTo(carte);
+//var LControl_N10 = L.control.layers(GroupDataALL_NACE_A10).addTo(carte);
+var container = LControl_N10.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Industries alimentaires</div>');
 
 var GroupDataALL_NACE_A56 = {
     // Division NACE 55 : Restauration
@@ -255,7 +267,7 @@ title.onAdd = function (carte) {
     return this._div;
 };
 title.update = function () {
-    this._div.innerHTML = '<a style="font-size: 20px; font-weight: bold; background-color: white; border: 4px solid white">BCE1030 (Horeca et Commerces)</a>';
+    this._div.innerHTML = '<a style="font-size: 20px; font-weight: bold; background-color: white; border: 4px solid white">BCE1030 (Horeca, Commerces et Industrie alimentaire)</a>';
 };
 title.addTo(carte);
 

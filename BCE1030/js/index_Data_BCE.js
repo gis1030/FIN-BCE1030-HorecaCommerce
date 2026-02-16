@@ -602,6 +602,33 @@ GroupMarkersMap1030_Q23.addLayer(Marker1030_23)
 // Clasificacion en funcion de Division NACE2025
 // Se buscan las entididades destinadas a la Taxes O8
 // Code Division 55,56,46,47
+// Se buscan las entididades destinadas a la Taxes 18
+// Code Division 10, 
+
+SectorLabel10 = "Industries alimentaires" //SectorLabel = "10" 
+var Marker1030_D10 = L.geoJSON([ListBCEMarkers1030], {
+    filter: function (feature) {
+        if (feature.properties.Division.includes(SectorLabel10)) return true
+    },
+    style: function (feature) {
+        return feature.properties && feature.properties.style;
+    },
+    onEachFeature: onEachFeature,
+
+    pointToLayer: function (feature, latlng) {
+        // return L.marker(latlng, { icon: DataIcon05 });
+        return L.circleMarker(latlng, {
+            color: 'black',
+            fillColor: '#1b7a94',
+            color: "#000", //'#d39f2f',
+            fillOpacity: 0.4,
+            radius: 5,
+            weight: 1,
+            opacity: 1
+        })
+    }
+}) // .addTo(carte); ; inutile lors de lúti;isation des clusters
+GroupMarkersMap1030_D10.addLayer(Marker1030_D10)
 
 SectorLabel46 = "Commerce de gros" //SectorLabel = "46" 
 var Marker1030_D46 = L.geoJSON([ListBCEMarkers1030], {
@@ -1064,6 +1091,9 @@ Marker1030_C01.on("click", function (event) {
 
 // BEGIN NEW OPTION ++++++++++++++++++++++++++++++
 const StylesCommerces = {
+    // --- DIVISION 10: Industries alimentaires  ---
+    "107": { fillColor: "#0c8f84", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Industries alimentaires
+
     // --- DIVISION 56: RESTAURATION (Chauds/Épicés) ---
     "561": { fillColor: "#E63946", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Rouge Restaurant
     "562": { fillColor: "#a77955", fillOpacity: 0.4, color: "#000", weight: 1, radius: 5 }, // Orange Traiteur
@@ -1101,6 +1131,9 @@ const StylesCommerces = {
 };
 
 // BEGIN ACTIVITES ++++++++++++++++++++++++
+// Code NACE 10
+SectorLabel_107 = "Fabrication de produits de boulangerie-pâtisserie et de pâtes alimentaires"
+
 // Code NACE 55
 SectorLabel_551 = "Hôtels et hébergement similaire"
 SectorLabel_552 = "Hébergement touristique et autre hébergement de courte durée"
@@ -1136,6 +1169,11 @@ SectorLabel_477 = "Commerce de détail d’autres biens, à l’exception des au
 SectorLabel_478 = "Commerce de détail d’automobiles, de motocycles et de leurs pièces et accessoires"
 SectorLabel_479 = "Activités de service d’intermédiation pour le commerce de détail"
 // END ACTIVITES ++++++++++++++++++++++++++
+
+
+var Marker_N107 = crearCapaNACE_Circular(SectorLabel_107, "107", [ListBCEMarkers1030]);
+GroupMarkersMap1030_D107.addLayer(Marker_N107)
+GroupMarkersMap1030_D10.addLayer(Marker_N107)
 
 var Marker_N561 = crearCapaNACE_Circular(SectorLabel_561, "561", [ListBCEMarkers1030]);
 var Marker_N562 = crearCapaNACE_Circular(SectorLabel_562, "562", [ListBCEMarkers1030]);
@@ -1233,6 +1271,8 @@ Marker_N552.on("click", function (event) { var clickedMarker = event.layer; Mark
 Marker_N553.on("click", function (event) { var clickedMarker = event.layer; MarkerDataView(clickedMarker) });
 Marker_N554.on("click", function (event) { var clickedMarker = event.layer; MarkerDataView(clickedMarker) });
 Marker_N559.on("click", function (event) { var clickedMarker = event.layer; MarkerDataView(clickedMarker) });
+
+Marker_N107.on("click", function (event) { var clickedMarker = event.layer; MarkerDataView(clickedMarker) });
 // END ==== Data Viewer ========
 
 //++++++++++++++++++++++++++++++++

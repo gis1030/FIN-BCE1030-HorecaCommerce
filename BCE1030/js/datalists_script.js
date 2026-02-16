@@ -43,10 +43,10 @@ const BCE_SecEconomique = [
     //"Arts, Sports Et Activités Récréatives",
     //"Autres Activités De Services",
     //"Construction",
-    //"Industrie Manufacturière",
     //"SectorGroup",
     //"Télécommunications, Programmation Informatique, Conseil, Infrastructure Informatique Et Autres Activités De Service D'Information",
     //"Transports Et Entreposage",
+	"Industrie Manufacturière",
     "Hébergement Et Restauration",
     "Commerce",
 ]

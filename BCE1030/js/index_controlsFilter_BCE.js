@@ -10,14 +10,14 @@ var CarteGroup = {
         "<b>Google Streets-Cycle</b>": carte07,
         "<b>Google Traffic</b>": carte08, */
 };
-
+var LControl00 = L.control.layers(CarteGroup).addTo(carte);
+var container = LControl00.getContainer().querySelector('.leaflet-control-layers-overlays');
+container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">Fond de carte</div>');
 
 var GroupBCE1030 = {
     "<b>Enterprises Schaerbeek</b></br>": GroupMarkersMap1030_ALL,
 };
 
-
-var LControl01 = L.control.layers(CarteGroup).addTo(carte);
 //var LControl02 = L.control.layers(GroupBCE1030).addTo(carte);
 // ++++++++ Choix de cartes et Arbres ++++++++
 
@@ -211,7 +211,7 @@ title.onAdd = function (carte) {
     return this._div;
 };
 title.update = function () {
-    this._div.innerHTML = '<a style="font-size: 20px; font-weight: bold; background-color: white; border: 4px solid white">BCE1030 (Horeca et Commerces)</a>';
+    this._div.innerHTML = '<a style="font-size: 20px; font-weight: bold; background-color: white; border: 4px solid white">BCE1030 (Horeca, Commerces et Industrie alimentaire)</a>';
 };
 title.addTo(carte);
 

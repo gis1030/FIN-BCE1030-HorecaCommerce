@@ -470,6 +470,24 @@ var GroupMarkersMap1030_Q23 = L.markerClusterGroup({
 });
 
 // ++++++++++++++++++++++++++++ others not used ++++++++++++
+var GroupMarkersMap1030_D10 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_07 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
 var GroupMarkersMap1030_D46 = L.markerClusterGroup({
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
@@ -615,6 +633,24 @@ var GroupMarkersMap1030_C01 = L.markerClusterGroup({
 });
 
 // +++++++++++ BEGIN Activites NACE2025 NACE 561-564 +++++++++++++
+var GroupMarkersMap1030_D107 = L.markerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: true,
+    zoomToBoundsOnClick: true,
+    removeOutsideVisibleBounds: true,
+    disableClusteringAtZoom: 14,
+    maxClusterRadius: 80,
+    singleMarkerMode: false,
+    iconCreateFunction: function (cluster) {
+        var digits = (cluster.getChildCount() + '').length;
+        return L.divIcon({
+            html: cluster.getChildCount(),
+            className: 'cluster02_01 digits-' + digits,
+            iconSize: null
+        });
+    }
+});
+
 var GroupMarkersMap1030_D561 = L.markerClusterGroup({
     spiderfyOnMaxZoom: true,
     showCoverageOnHover: true,
