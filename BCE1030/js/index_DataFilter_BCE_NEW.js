@@ -155,6 +155,7 @@ function onEachFeature(feature, layer) {
     layer.bindPopup(popupContent);
 }
 
+
 function MarkerDataView(clickedMarker) {
     //var AdresseRef = clickedMarker.feature.properties.StreetFR + " " + clickedMarker.feature.properties.HouseNumber + ", 1030 Schaerbeek";
     var CommentairesDossier = clickedMarker.feature.properties.Commentaires + " Dossier: " + clickedMarker.feature.properties.Dossier;
@@ -178,7 +179,6 @@ function MarkerDataView(clickedMarker) {
     document.getElementById("Division").value = clickedMarker.feature.properties.Division
     document.getElementById("Activites").value = clickedMarker.feature.properties.Activites
     document.getElementById("Condition").value = clickedMarker.feature.properties.Condition
-
 
     //document.getElementById("HouseNumBCE").value = clickedMarker.feature.properties.HouseNumber
     //document.getElementById("CommentairesBCE").value = CommentairesDossier
@@ -240,7 +240,6 @@ function SearchData() {
     var JuridicalFormLabel = document.getElementById("JuridicalForm").value;
     var ConditionLabel = document.getElementById("Condition").value;
 
-
     //on initialise les labels
     if (EntityNumLabel == "") {
         EntityNumLabel = "ALLData";
@@ -270,9 +269,8 @@ function SearchData() {
         JuridicalFormLabel = "ALLData";
     }
     if (ConditionLabel == "") {
-        ConditionLabel = "ALLData";
+        CondtionLabel = "ALLData";
     }
-
 
     // on initialise les compteurs
     var k_NACELabel = 0;
@@ -460,6 +458,8 @@ function SearchData() {
         }
     }
 
+
+
     // Juridical Form
     if (EntityNumLabel === "ALLData") {
         if (JuridicalFormLabel !== "ALLData") {
@@ -482,32 +482,6 @@ function SearchData() {
             k_JuridicalFormLabel = jsonSEARCH.features.length;
             console.log("length k_JuridicalForm:", k_JuridicalFormLabel);
             document.querySelector("#CommentairesBCE").value = 'Forme juridique: ' + JuridicalFormLabel + " > Total: " + k_JuridicalFormLabel;
-        }
-    }
-
-
-    // Condition
-    if (EntityNumLabel === "ALLData") {
-        if (ConditionLabel !== "ALLData") {
-            if (jsonALL_00 === 0) {
-                //console.log("... alternatiba 01")
-                jsonALL_00 = jsonALL;
-                jsonSEARCH = {};
-            } else {
-                //console.log("... alternatiba 02")
-                jsonALL_00 = jsonSEARCH;
-                jsonSEARCH = {};
-            }
-            mylist = [{ SearchLabel: ConditionLabel }];
-
-            jsonSEARCH.features = jsonALL_00.features.filter(item => {
-                if (mylist.filter(myitem => myitem.SearchLabel.toLowerCase() === item.properties.Condition.toLowerCase()).length > 0) {
-                    return item;
-                }
-            });
-            k_ConditionLabel = jsonSEARCH.features.length;
-            console.log("length k_Condition:", k_ConditionLabel);
-            document.querySelector("#CommentairesBCE").value = 'Condition: ' + ConditionLabel + " > Total: " + k_ConditionLabel;
         }
     }
 
