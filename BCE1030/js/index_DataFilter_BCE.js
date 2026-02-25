@@ -25,7 +25,7 @@ L.geoJSON([BoundaryDistrict], {
 // ++++++ Liste des Marqueurs ++++++++
 if (typeof EntityNumLabel === 'undefined' || NACELabel === 'undefined' || DenominationLabel === 'undefined' ||
     EntityTypeLabel === 'undefined' || SectorGroupLabel === 'undefined' || StreetLabel === 'undefined' || QuartierLabel === 'undefined'
-    || TypeOfEnterpriseLabel === 'undefined' || JuridicalFormLabel === 'undefined' || ConditionLabel === 'undefined') {
+    || TypeOfEnterpriseLabel === 'undefined' || JuridicalFormLabel === 'undefined' || ConditionLabel === 'undefined' || Taxe1030Label === 'undefined') {
 
     var EntityNumLabel = ""
     var NACELabel = ""
@@ -37,6 +37,7 @@ if (typeof EntityNumLabel === 'undefined' || NACELabel === 'undefined' || Denomi
     var TypeOfEnterpriseLabel = ""
     var JuridicalFormLabel = ""
     var ConditionLabel = ""
+    var Taxe1030Label = ""
 
     var Marker1030 = L.geoJSON([ListBCEMarkers1030], {
         style: function (feature) {
@@ -178,7 +179,7 @@ function MarkerDataView(clickedMarker) {
     document.getElementById("Division").value = clickedMarker.feature.properties.Division
     document.getElementById("Activites").value = clickedMarker.feature.properties.Activites
     document.getElementById("Condition").value = clickedMarker.feature.properties.Condition
-
+    document.getElementById("Taxe1030").value = clickedMarker.feature.properties.Taxe1030
 
     //document.getElementById("HouseNumBCE").value = clickedMarker.feature.properties.HouseNumber
     //document.getElementById("CommentairesBCE").value = CommentairesDossier
@@ -239,7 +240,7 @@ function SearchData() {
     var TypeOfEnterpriseLabel = document.getElementById("TypeOfEnterprise").value;
     var JuridicalFormLabel = document.getElementById("JuridicalForm").value;
     var ConditionLabel = document.getElementById("Condition").value;
-
+    var Taxe1030Label = document.getElementById("Taxe1030").value;
 
     //on initialise les labels
     if (EntityNumLabel == "") {
@@ -272,7 +273,9 @@ function SearchData() {
     if (ConditionLabel == "") {
         ConditionLabel = "ALLData";
     }
-
+    if (Taxe1030Label == "") {
+        Taxe1030Label = "ALLData";
+    }
 
     // on initialise les compteurs
     var k_NACELabel = 0;
@@ -284,6 +287,7 @@ function SearchData() {
     var k_TypeOfEnterpriseLabel = 0;
     var k_JuridicalFormLabel = 0;
     var k_ConditionLabel = 0;
+    var k_Taxe1030Label = 0;
 
     // On reinitialise les layers
     GroupMarkersMap1030_ALL.clearLayers();
@@ -484,8 +488,6 @@ function SearchData() {
             document.querySelector("#CommentairesBCE").value = 'Forme juridique: ' + JuridicalFormLabel + " > Total: " + k_JuridicalFormLabel;
         }
     }
-
-
     // Condition
     if (EntityNumLabel === "ALLData") {
         if (ConditionLabel !== "ALLData") {
@@ -508,6 +510,30 @@ function SearchData() {
             k_ConditionLabel = jsonSEARCH.features.length;
             console.log("length k_Condition:", k_ConditionLabel);
             document.querySelector("#CommentairesBCE").value = 'Condition: ' + ConditionLabel + " > Total: " + k_ConditionLabel;
+        }
+    }
+    // Taxe1030
+    if (EntityNumLabel === "ALLData") {
+        if (Taxe1030Label !== "ALLData") {
+            if (jsonALL_00 === 0) {
+                //console.log("... alternatiba 01")
+                jsonALL_00 = jsonALL;
+                jsonSEARCH = {};
+            } else {
+                //console.log("... alternatiba 02")
+                jsonALL_00 = jsonSEARCH;
+                jsonSEARCH = {};
+            }
+            mylist = [{ SearchLabel: Taxe1030Label }];
+
+            jsonSEARCH.features = jsonALL_00.features.filter(item => {
+                if (mylist.filter(myitem => myitem.SearchLabel.toLowerCase() === item.properties.Taxe1030.toLowerCase()).length > 0) {
+                    return item;
+                }
+            });
+            k_Taxe1030Label = jsonSEARCH.features.length;
+            console.log("length k_Taxe1030:", k_Taxe1030Label);
+            document.querySelector("#CommentairesBCE").value = 'Taxe1030: ' + Taxe1030Label + " > Total: " + k_Taxe1030Label;
         }
     }
 
@@ -544,5 +570,37 @@ function SearchData() {
 
         //console.log(jsonSEARCH)
     };
+
+    // Update Datalists based on filtered results
+    if (typeof populateDatalist === 'function' && typeof ListaPropiedad === 'function') {
+        const filteredData = [jsonSEARCH];
+
+        const BCE_TypeEntity_Filtered = ListaPropiedad("EntityType", filteredData);
+        populateDatalist('datalist_TypeEntity', BCE_TypeEntity_Filtered);
+
+        const BCE_TypeEnterprise_Filtered = ListaPropiedad("TypeOfEnterprise", filteredData);
+        populateDatalist('datalist_TypeEnterprise', BCE_TypeEnterprise_Filtered);
+
+        const BCE_JuridicalForm_Filtered = ListaPropiedad("JuridicalForm", filteredData);
+        populateDatalist('datalist_JuridicalForm', BCE_JuridicalForm_Filtered);
+
+        const BCE_SecEconomique_Filtered = ListaPropiedad("SectorGroup", filteredData);
+        populateDatalist('datalist_SecEconomique', BCE_SecEconomique_Filtered);
+
+        const Quartier1030_Filtered = ListaPropiedad("Quartier", filteredData);
+        populateDatalist('datalist_Quartier', Quartier1030_Filtered);
+
+        const streetNames1030_FR_Filtered = ListaPropiedad("StreetFR", filteredData);
+        populateDatalist('datalist_StreetFR', streetNames1030_FR_Filtered);
+
+        const Condition1030_Filtered = ListaPropiedad("Condition", filteredData);
+        populateDatalist('datalist_Condition', Condition1030_Filtered);
+
+        const Taxe1030_Filtered = ListaPropiedad("Taxe1030", filteredData);
+        populateDatalist('datalist_Taxe1030', Taxe1030_Filtered);
+    }
+
+
+
 }
 // END ======== Javascript FUnctions  ======== END \\

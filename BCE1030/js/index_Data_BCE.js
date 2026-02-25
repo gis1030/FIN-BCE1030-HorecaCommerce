@@ -761,6 +761,7 @@ var Marker1030_D99 = L.geoJSON([ListBCEMarkers1030], {
     filter: function (feature) {
         //if (feature.geometry.type !== SectorLabel) return true
         if (feature.geometry.type !== SectorLabel &&
+            feature.geometry.type !== SectorLabel10 &&
             feature.geometry.type !== SectorLabel46 &&
             feature.geometry.type !== SectorLabel47 &&
             feature.geometry.type !== SectorLabel55 &&
@@ -1349,6 +1350,7 @@ function MarkerDataView(clickedMarker) {
     document.getElementById("Division").value = clickedMarker.feature.properties.Division
     document.getElementById("Activites").value = clickedMarker.feature.properties.Activites
     document.getElementById("Condition").value = clickedMarker.feature.properties.Condition
+    document.getElementById("Taxe1030").value = clickedMarker.feature.properties.Taxe1030
 
     //document.getElementById("HouseNumBCE").value = clickedMarker.feature.properties.HouseNumber
     //document.getElementById("CommentairesBCE").value = CommentairesDossier

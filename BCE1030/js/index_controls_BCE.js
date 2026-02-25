@@ -55,7 +55,7 @@ var container = LControl_ONYX_Con.getContainer().querySelector('.leaflet-control
 container.insertAdjacentHTML('afterbegin', '<div style="font-weight:bold; font-size:14px; padding: 5px 0;">ONYX</div>');
 
 var GroupDataALL_NACE_Division = {
-    "<b>N10 commerce de gros</b></br>": GroupMarkersMap1030_D10,
+    "<b>N10 industries alimentaires</b></br>": GroupMarkersMap1030_D10,
     "<b>N46 commerce de gros</b></br>": GroupMarkersMap1030_D46,
     "<b>N47 commerce de détail</b></br>": GroupMarkersMap1030_D47,
     "<b>N55 hébergement</b></br>": GroupMarkersMap1030_D55,

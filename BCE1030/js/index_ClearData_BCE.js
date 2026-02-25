@@ -104,10 +104,24 @@ function ClearDataSearch() {
     document.getElementById("Activites").value = ""
     document.getElementById("Classification").value = ""
     document.getElementById("Condition").value = ""
+    document.getElementById("Taxe1030").value = ""
 
     LoadALLData();
+    RestoreDatalists();
     //window.open("Carte_BCESchaerbeek_ALL_22.html");
     //window.close();
+}
+
+function RestoreDatalists() {
+    if (typeof populateDatalist === 'function') {
+        if (typeof BCE_TypeEntity_0 !== 'undefined') populateDatalist('datalist_TypeEntity', BCE_TypeEntity_0);
+        if (typeof BCE_TypeEnterprise_0 !== 'undefined') populateDatalist('datalist_TypeEnterprise', BCE_TypeEnterprise_0);
+        if (typeof BCE_JuridicalForm_0 !== 'undefined') populateDatalist('datalist_JuridicalForm', BCE_JuridicalForm_0);
+        if (typeof BCE_SecEconomique_0 !== 'undefined') populateDatalist('datalist_SecEconomique', BCE_SecEconomique_0);
+        if (typeof Quartier1030_0 !== 'undefined') populateDatalist('datalist_Quartier', Quartier1030_0);
+        if (typeof streetNames1030_FR_0 !== 'undefined') populateDatalist('datalist_StreetFR', streetNames1030_FR_0);
+        if (typeof Condition1030_0 !== 'undefined') populateDatalist('datalist_Condition', Condition1030_0);
+    }
 }
 
 function ClearData02() {
