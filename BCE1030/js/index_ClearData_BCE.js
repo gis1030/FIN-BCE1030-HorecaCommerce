@@ -121,6 +121,7 @@ function RestoreDatalists() {
         if (typeof Quartier1030_0 !== 'undefined') populateDatalist('datalist_Quartier', Quartier1030_0);
         if (typeof streetNames1030_FR_0 !== 'undefined') populateDatalist('datalist_StreetFR', streetNames1030_FR_0);
         if (typeof Condition1030_0 !== 'undefined') populateDatalist('datalist_Condition', Condition1030_0);
+        if (typeof Taxe1030_0 !== 'undefined') populateDatalist('datalist_Taxe1030', Taxe1030_0);
     }
 }
 
