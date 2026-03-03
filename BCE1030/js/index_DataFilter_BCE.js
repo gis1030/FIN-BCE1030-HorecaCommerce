@@ -320,7 +320,10 @@ function SearchData() {
             });
             k_NACELabel = jsonSEARCH.features.length;
             console.log("lenght k_NACE:", k_NACELabel)
-            document.querySelector("#CommentairesBCE").value = 'Code NACE: ' + NACELabel + " > Total: " + k_NACELabel;
+            //document.querySelector("#CommentairesBCE").value = 'Code NACE: ' + NACELabel + " > Total: " + k_NACELabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Code NACE: ' + NACELabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Denomination de la enterprise (recherche partial)
@@ -342,7 +345,10 @@ function SearchData() {
 
             k_DenominationLabel = jsonSEARCH.features.length;
             console.log("length k_Denomination:", k_DenominationLabel)
-            document.querySelector("#CommentairesBCE").value = 'Denomination: ' + DenominationLabel + " > Total: " + k_DenominationLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Denomination: ' + DenominationLabel + " > Total: " + k_DenominationLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Denomination: ' + DenominationLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Type d'enterprise
@@ -359,7 +365,10 @@ function SearchData() {
             });
             k_EntityTypeLabel = jsonSEARCH.features.length;
             console.log("length k_EntityType:", k_EntityTypeLabel);
-            document.querySelector("#CommentairesBCE").value = 'Type Enterprise: ' + EntityTypeLabel + " > Total: " + k_EntityTypeLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Type Enterprise: ' + EntityTypeLabel + " > Total: " + k_EntityTypeLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Type Enterprise: ' + EntityTypeLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Sector Economique
@@ -383,7 +392,10 @@ function SearchData() {
             });
             k_SectorGroupLabel = jsonSEARCH.features.length;
             console.log("length k_SectorGroup:", k_SectorGroupLabel);
-            document.querySelector("#CommentairesBCE").value = 'Group Economique: ' + SectorGroupLabel + " > Total: " + k_SectorGroupLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Group Economique: ' + SectorGroupLabel + " > Total: " + k_SectorGroupLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Group Economique: ' + SectorGroupLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Rue de l'eneterprise  (recherche partial)
@@ -411,7 +423,10 @@ function SearchData() {
 
             k_StreetLabel = jsonSEARCH.features.length;
             console.log("length k_Street:", k_StreetLabel);
-            document.querySelector("#CommentairesBCE").value = 'Rue Enterprise: ' + StreetLabel + " > Total: " + k_StreetLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Rue Enterprise: ' + StreetLabel + " > Total: " + k_StreetLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Rue Enterprise: ' + StreetLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Quartier
@@ -435,7 +450,10 @@ function SearchData() {
             });
             k_QuartierLabel = jsonSEARCH.features.length;
             console.log("length k_Quartier:", k_QuartierLabel);
-            document.querySelector("#CommentairesBCE").value = 'Quartier: ' + QuartierLabel + " > Total: " + k_QuartierLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Quartier: ' + QuartierLabel + " > Total: " + k_QuartierLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Quartier: ' + QuartierLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
 
@@ -460,7 +478,10 @@ function SearchData() {
             });
             k_TypeOfEnterpriseLabel = jsonSEARCH.features.length;
             console.log("length k_TypeOfEnterprise:", k_TypeOfEnterpriseLabel);
-            document.querySelector("#CommentairesBCE").value = 'Type d\'entreprise: ' + TypeOfEnterpriseLabel + " > Total: " + k_TypeOfEnterpriseLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Type d\'entreprise: ' + TypeOfEnterpriseLabel + " > Total: " + k_TypeOfEnterpriseLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Type d\'entreprise: ' + TypeOfEnterpriseLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
 
@@ -485,7 +506,10 @@ function SearchData() {
             });
             k_JuridicalFormLabel = jsonSEARCH.features.length;
             console.log("length k_JuridicalForm:", k_JuridicalFormLabel);
-            document.querySelector("#CommentairesBCE").value = 'Forme juridique: ' + JuridicalFormLabel + " > Total: " + k_JuridicalFormLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Forme juridique: ' + JuridicalFormLabel + " > Total: " + k_JuridicalFormLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Forme juridique: ' + JuridicalFormLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Condition
@@ -509,7 +533,10 @@ function SearchData() {
             });
             k_ConditionLabel = jsonSEARCH.features.length;
             console.log("length k_Condition:", k_ConditionLabel);
-            document.querySelector("#CommentairesBCE").value = 'Condition: ' + ConditionLabel + " > Total: " + k_ConditionLabel;
+            //document.querySelector("#CommentairesBCE").value = 'Condition: ' + ConditionLabel + " > Total: " + k_ConditionLabel;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Condition: ' + ConditionLabel + " > Total Enterprises " + k_Entite_U;
         }
     }
     // Taxe1030
@@ -533,7 +560,10 @@ function SearchData() {
             });
             k_Taxe1030Label = jsonSEARCH.features.length;
             console.log("length k_Taxe1030:", k_Taxe1030Label);
-            document.querySelector("#CommentairesBCE").value = 'Taxe1030: ' + Taxe1030Label + " > Total: " + k_Taxe1030Label;
+            //document.querySelector("#CommentairesBCE").value = 'Taxe1030: ' + Taxe1030Label + " > Total: " + k_Taxe1030Label;
+
+            const k_Entite_U = contarPropiedadUnicos(jsonSEARCH, "EnterpriseNumber");
+            document.querySelector("#CommentairesBCE").value = 'Taxe1030: ' + Taxe1030Label + " > Total Enterprises " + k_Entite_U;
         }
     }
 
@@ -599,8 +629,28 @@ function SearchData() {
         const Taxe1030_Filtered = ListaPropiedad("Taxe1030", filteredData);
         populateDatalist('datalist_Taxe1030', Taxe1030_Filtered);
     }
-
-
-
 }
+
+function contarPropiedadUnicos(data, propertyName) {
+    // 1. Verificación de seguridad: si no hay datos o features, devolvemos 0
+    if (!data || !data.features || !Array.isArray(data.features)) {
+        return 0;
+    }
+
+    // 2. Extraemos el valor de la propiedad para cada feature
+    // Usamos .map para crear un arreglo solo con esos valores
+    const todosLosValores = data.features.map(f => {
+        return f.properties ? f.properties[propertyName] : undefined;
+    });
+
+    // 3. Filtramos los valores 'undefined' o 'null' por si alguna feature no tiene esa propiedad
+    const valoresValidos = todosLosValores.filter(valor => valor !== undefined && valor !== null);
+
+    // 4. El Set elimina automáticamente los duplicados
+    const setDeValoresUnicos = new Set(valoresValidos);
+
+    // 5. Retornamos la cantidad de elementos únicos
+    return setDeValoresUnicos.size;
+}
+
 // END ======== Javascript FUnctions  ======== END \\
